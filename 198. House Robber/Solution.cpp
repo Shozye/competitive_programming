@@ -1,12 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int max(int a, int b){
-    if (a > b)
-        return a;
-    return b;
-}
-
 class Solution {
 public:
     int rob(vector<int>& nums) {
