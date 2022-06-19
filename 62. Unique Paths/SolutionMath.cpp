@@ -8,6 +8,11 @@ public:
         // we can arrange Going Down and Going Right on (m + n)! ways but we shouldn't differentiate going down and going right so
         // answer is (m+n)! / (m!*n!)
 
-        
+        long answer = 1;
+        for(int i = m+1; i <= m+n; i++){
+            answer *= i;
+            answer /= i-m;
+        }
+        return (int)answer;
     }
 };
