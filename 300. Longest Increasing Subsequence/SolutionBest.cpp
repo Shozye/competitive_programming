@@ -33,7 +33,6 @@ public:
             }
             int place = binary_search(subsequence, 0, subsequence.size()-1, num);
             subsequence[place] = num;
-            
         }
         return subsequence.size();
     }
