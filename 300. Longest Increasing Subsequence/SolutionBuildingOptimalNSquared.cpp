@@ -4,6 +4,9 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
+        if(nums.size() == 0){
+            return 0;
+        }
         vector<int> subsequence;
         subsequence.push_back(nums[0]);
 
@@ -14,8 +17,9 @@ public:
                 subsequence.push_back(num);
                 continue;
             }
-            for(int j = subsequence.size()-1; j >= 0; j++){
-                if (num < subsequence.at(j)){
+            for(int j = 0; j < subsequence.size(); j++){
+                
+                if (num <= subsequence.at(j)){
                     subsequence[j] = num;
                     break;
                 }
