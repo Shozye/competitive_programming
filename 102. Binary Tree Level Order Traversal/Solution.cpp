@@ -20,7 +20,7 @@ public:
         if (root == nullptr){
             return;
         }
-        if (height < levels.size() - 1){
+        if (height >= levels.size()){
             vector<int> temp;
             levels.push_back(temp);
         }
